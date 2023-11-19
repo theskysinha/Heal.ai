@@ -1,27 +1,31 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './styles.css'
+import React from "react";
+import { Link } from "react-router-dom";
+import "./styles.css";
 
 const Navbar = () => {
   return (
-    <div className='header'>
-        <Link to='/'><h1>Heal.ai</h1></Link>
-        <ul className='nav-menu'>
-            <li>
-                <Link to='/'>Home</Link>
-            </li>
-            <li>
-                <Link to='/journal'>Journal</Link>
-            </li>
-            <li>
-                <Link to='/chatbot'>ChatBot</Link>
-            </li>
-            <li>
-                <Link to='/zen'>Zen Mode</Link>
-            </li>
-        </ul>
+    <div className="header">
+      <div className="heading">
+        <a href="/" className="link-dark" style={{ textDecoration: "none" }}>
+          Heal.ai
+        </a>
+      </div>
+      <ul className="nav-menu">
+        <div className="profile_image">
+          <img src="profile.png" width="80 " height="80" />
+        </div>
+        <div className="profile_link">
+          <a
+            href="/Profile"
+            className="link-dark"
+            style={{ textDecoration: "none" }}
+          >
+            Profile
+          </a>
+        </div>
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

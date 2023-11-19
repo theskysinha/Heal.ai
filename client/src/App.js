@@ -7,6 +7,7 @@ import Zen from './components/pages/Zen/Zen';
 import Registration from './components/pages/Registration/Registration';
 import { Routes, Route, BrowserRouter as Router} from 'react-router-dom';
 
+
 function App() {
   return (
     <>
