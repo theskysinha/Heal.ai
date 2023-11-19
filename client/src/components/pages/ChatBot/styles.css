@@ -1,0 +1,350 @@
+.gradient-background {
+    height: 707px;
+     background: linear-gradient(62deg, #b7dae4, #87aae1, #e8b7fb, #f5cbe9);
+       animation: gradient 60s ease infinite; 
+        background-size: 400% 400%;
+    
+  }
+  @-webkit-keyframes gradient{
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+       background-position: 0% 50%;
+    }
+  }
+  @keyframes gradient{
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+       background-position: 0% 50%;
+    }
+  }
+
+
+
+.chatbot{
+  background-color: transparent;
+}
+
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  blockquote, q {
+    quotes: none;
+  }
+  
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  
+  /*table {
+    border-collapse: collapse;
+    border-spacing: 20%;
+    border-color: rgb(164, 38, 38);
+    border-width: ;
+  }
+  
+  /* Colors and Fonts */
+  :root {
+    --main-color-1: #5f5f5f;
+    --main-color-2: #323232;
+    --second-color-1: #CC8914;
+    
+    --bot-output-delay: 600ms;
+  }
+  
+ /* body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.45;
+    background-color: var(--background-color);
+  }*/
+  
+  /* Chatbot Overview Styles */
+  .chatbot__overview {
+    
+    flex-shrink:0;
+    flex-flow: row nowrap;
+    align-content: space-between;
+    min-height: 50vh;
+    max-height: 50vh;
+    margin-top :0;
+    margin-bottom: 0;
+    padding: 1em;
+    padding-bottom: 0;
+    
+  }
+  
+  .chatlist {
+    font-family: inherit;
+    font-size: 1em;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    overflow-x: hidden;
+    
+    width: 700px;
+    height: 200px;
+    margin-top:10%;
+    margin-left:35%
+  }
+  
+  .userInput, .bot__output {
+    padding: 0.85em;
+    margin: 0.5em;
+    max-width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    border-bottom: 1px solid #777;
+  }
+  
+  .userInput {
+    text-transform: lowercase;
+    box-shadow: 1px 1px 2px #666;
+    border-top: 4px solid var(--second-color-1);
+    opacity: 0;
+    animation-name: animateBubble;
+    animation-duration: 400ms;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+  }
+  
+  .bot__output {
+    align-self: flex-start;
+    box-shadow: -1px 1px 2px #666;
+    border-top: 4px solid var(--main-color-2);
+    will-change: auto;
+    height: auto;
+    opacity: 0;
+    animation-name: animateBubble;
+    animation-duration: 400ms;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+    &:last-child {
+      display: none;
+    }
+  }
+  
+  .bot__command {
+    color: #f5f5f5;
+    color: var(--main-color-2);
+    font-weight: 600;
+    padding: 0.1em;
+  }
+  
+  .bot__output:nth-child(1){
+    animation-delay: var(--bot-output-delay);
+    animation-play-state: running;
+  }
+  
+  .bot__output:nth-child(2){
+    animation-delay: calc(var(--bot-output-delay) * 2);
+    animation-play-state: running;
+  }
+  
+  .bot__output:nth-child(3){
+    animation-delay: calc(var(--bot-output-delay) * 3);
+    animation-play-state: running;
+  }
+  
+  .bot__output--standard:last-child{
+    display: block;
+  }
+  
+  .bot__output--failed {
+    display: block !important;
+  }
+  
+  .bot__output--second-sentence {
+    display: block;
+  }
+  
+  .bot__outputImage {
+    max-width: 16em;
+    height: 12em;
+  }
+  
+  @keyframes animateBubble {
+    0% {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /*.block--background {
+    background-color: var(--background-color);
+    width: 100vw;
+    height: 100vh;
+  }*/
+  
+  #chatform {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 25%;
+    margin: 0 auto;
+    padding-top: 1em;
+    font-size: 1em;
+    font-family: Helvetica;
+  }
+  
+  textarea[name="chatbox"] {
+    resize: none;
+    border: 2px solid var(--main-color-2);
+    border-right: 0;
+    width: 70%;
+    background-color: transparent;
+    color: #fff;
+    height: 3em;
+    margin: 0;
+    padding: 0.75em;
+    border-radius: 8px 0px 0px 8px;
+    font-family: inherit;
+    &:focus {
+      outline: none;
+      border: 2px solid lighten(var(--main-color-2), 15%);
+    }
+  }
+  
+  ::-webkit-input-placeholder {
+    color: #fff;
+  }
+  
+  :-moz-placeholder {
+    color: #fff;
+    opacity: 1;
+  }
+  
+  ::-moz-placeholder {
+    color: #fff;
+    opacity: 1;
+  }
+  
+  input[type="submit"] {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    width: 25%;
+    margin: 0;
+    background-color: var(--main-color-2);
+    color: #c7c7c7;
+    border: 2px solid var(--main-color-2);
+    border-left: 0;
+    border-radius: 0 8px 8px 0;
+    font-family: inherit;
+    font-size: 1em;
+    transition: 200ms all ease-in;
+    &:hover {
+      background-color: lighten(var(--main-color-2), 15%);
+      border-color:var(--main-color-2);
+    }
+}
+
+
+
+/*.btn-save {
+  background-color: #d5f9f6;
+  background-image: linear-gradient(315deg, #89d8d3 0%, #cbfff6 74%);
+  border: none;
+  z-index: 1;
+  position: relative; /* Make sure the button has a position other than static 
+}
+/*
+.btn-save:after {
+  content: 'Save Chat'; /* Add content property for pseudo-elements */
+ /* width: 150%; /* Adjust the width based on your needs 
+  height: 150%; /* Adjust the height based on your needs 
+  position: absolute; /* Position the pseudo-element relative to the button 
+  bottom: 0; /* Align to the bottom 
+  left: 800%; /* Align to the left */
+  /*top:400%;
+  border-radius: 40px;
+  background-color: #4dccc6;
+  background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  box-shadow:
+    -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+  z-index: -1; /* Set a lower z-index for the pseudo-element 
+}
+
+.btn-save:hover {
+  color: #fff;
+}
+
+.btn-save:hover:after {
+  height: 150%; /* Adjust the height for the hover effect 
+}
+
+.btn-save:active {
+  top: 2px;  If you want a slight movement on click 
+}*/
+
+
+.btn-clear{
+  background-color:rgb(203, 237, 249);
+  margin-top: 3% ;
+  margin-left: 0%;
+  width:110px;
+  height:30px;
+  border:none;
+  font-size: 14px;
+  color:#666;
+  box-shadow:
+  -7px -7px 20px 0px #fff9,
+  -4px -4px 5px 0px #fff9,
+  7px 7px 20px 0px #0002,
+  4px 4px 5px 0px #0001;transition: all 0.3s ease;
+  z-index: -1;
+  border-radius: 40px;
+   
+}
+.btn-clear:hover {
+  background-color: rgb(131, 197, 221); /* Change the background color on hover */
+}
+.btn-save{
+  background-color:rgb(203, 237, 249);
+  margin-top: 3% ;
+  margin-left:39%;
+  margin-right: 3%;
+  width:110px;
+  height:30px;
+  border:none;
+  color:#666;
+  font-size: 14px;
+  box-shadow:
+  -7px -7px 20px 0px #fff9,
+  -4px -4px 5px 0px #fff9,
+  7px 7px 20px 0px #0002,
+  4px 4px 5px 0px #0001;transition: all 0.3s ease;
+  z-index: -1;
+  border-radius: 40px;
+   
+}
+.btn-save:hover {
+  background-color: rgb(131, 197, 221); /* Change the background color on hover */
+}
