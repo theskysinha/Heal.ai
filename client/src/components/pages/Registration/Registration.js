@@ -89,7 +89,7 @@ export default function Registration()
         <label class="form-check-label" for="flexCheckDefault">
           Remember Me{" "}
         </label>
-        <a href="#" class="link-dark">
+        <a href="/login" class="link-dark">
           Already have an account?
         </a>
       </div>

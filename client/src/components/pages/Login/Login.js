@@ -44,7 +44,7 @@ export default function Login() {
         <a>Enter your credentials to access your account</a>
       </div>
       <button type="button" class="btn btn-primary">
-      <img src="google.png" width="20" height="18" alt=""/>Sign Up With Google</button>
+      <img src="google.png" width="20" height="18" alt=""/>Sign in With Google</button>
       
        <div class="seperator">
         <hr></hr>OR<hr></hr> </div>
