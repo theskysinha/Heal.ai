@@ -12,13 +12,6 @@ const test = (req,res)=>{
 const registerUser = async(req,res)=>{
     try {   
         const{email,password}= req.body;
-        //check if name is entered
-        // if(!name)
-        // {
-        //     return res.json({
-        //         error:'name is not required'
-        //     })
-        // };
         if(!password|| password.length<6)
         {
             return res.json({
@@ -68,7 +61,7 @@ const loginUser = async (req,res)=>{
         const match = await comparePassword(password,user.password)
         if(match)
         {
-            jwt.sign({email:user.email, id:user.id},process.env.JWT_SECRET,{},(err,token)=>{
+            jwt.sign({email: user.email, id: user.id}, process.env.JWT_SECRET,{},(err,token)=>{
                 if(err) throw err;
                 res.cookie('token', token).json(user)
             })
@@ -83,21 +76,29 @@ const loginUser = async (req,res)=>{
     }
 }
 
-const  getProfile=(req,res)=>{
-const{token}=req.cookies
-if(token){
-    jwt.verify(token,process.env.JWT_SECRET, {}, (err,user) =>{
-        if (err) throw err;
-        res.json(user)
+    const getProfile=(req,res)=>{
+    const{token}=req.cookies
+    if(token){
+        jwt.verify(token,process.env.JWT_SECRET, {}, (err,user) =>{
+            if (err) throw err;
+            res.json(user)
+        })
+    }
+    else{
+        res.json(null)
+    }
+}
+
+const logoutUser = (req,res)=>{
+    res.clearCookie('token').json({
+        message:'Logged out successfully'
     })
 }
-else{
-    res.json(null)
-}
-}
+
 module.exports={
     test,
     registerUser,
     loginUser,
-    getProfile
+    getProfile,
+    logoutUser
 }
