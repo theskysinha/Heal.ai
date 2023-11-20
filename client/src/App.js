@@ -27,7 +27,6 @@ function App() {
         <Route path="/chatbot" element={<ChatBot />} />
         <Route path="/login" element={<Login />} />
         <Route path="/zen" element={<Zen />} />
-        <Route path="/registration" element={<Registration />} />
       </Routes>
     </Router>
     </UserContextProvider>
