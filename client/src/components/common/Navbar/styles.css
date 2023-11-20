@@ -1,14 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Mohave&display=swap');
+
+
+
 .header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+   
+    background:transparent;
+
+}
+.heading{
+    color: #000000;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.6px;
+    
+    margin-bottom:-60px;
+    margin-left: -57px;
+    text-decoration: none;
+        
+    
+
+
+}
+.link-dark{
+    color: #000;
+    font-family: Inter;
 }
 
 .nav-menu{
     display: flex;
+    margin-top: 0%;
+    color: #000;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.2px;
+    text-decoration: none;
 }
 
 .nav-menu li{
     padding: 0 1rem;
+    
+}
+.profile_image{
+    margin-left:90%;
+   
+}
+.profile_link{
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.2px;
+    text-decoration: none;
+    margin-top:2%;
+    margin-left: -20px;
+    
 }

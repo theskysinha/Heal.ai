@@ -1,0 +1,175 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300&family=Jacques+Francois&family=Mohave&display=swap');
+
+.Home{
+    background: linear-gradient(180deg, #ABDCE7 0%, #95F3ED 0.01%, #FFF 100%);
+}
+
+.Heading{
+    color: #146940;
+    text-align: center;
+    font-family: Jacques Francois;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height:1%;
+    letter-spacing: -2.8px;
+    margin-top: 0%;
+    
+}
+.try_now{
+    border-radius: 10px;
+    background: #f9f8f8;
+    border-color: #FFF;
+    width: 260px;
+    height: 60px;
+    flex-shrink: 0;
+    margin-left:40%;
+    margin-top: 50px;
+    text-align: center;
+    color: #000;
+    text-align: center;
+    font-family: Jacques Francois;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.2px;
+    cursor: pointer;
+    display: flex; 
+    align-items: center; 
+    position: relative;
+    justify-content: center;
+    
+    
+} 
+
+.arrow {
+    font-size: 35px; /* Adjust the font size of the arrow */
+    vertical-align:middle;
+
+    margin-left: 10px; /* Adjust this value for spacing between text and arrow */
+    
+  }
+
+.container {
+    position: absolute;
+    height: 300px;
+    width: 600px;
+    top: 60px;
+    left: calc(50% - 300px);
+    display: flex;
+    margin-top: 22%;
+  }
+  
+  /* Define styles for each card individually */
+  
+  /* Card 1 */
+  .card-1 {
+    
+    border-radius: 40px;
+    
+    background: linear-gradient(180deg, #F8F2D2 0%, rgba(248, 242, 210, 0.00) 100%);
+  }
+  
+  /* Card 2 */
+  .card-2 {
+    border-radius: 40px;
+    background: linear-gradient(180deg, #CCEFCB 0%, rgba(204, 239, 203, 0.00) 100%);
+  }
+  
+  /* Card 3 */
+  .card-3 {
+    border-radius: 40px;
+    background: linear-gradient(180deg, #9392F1 0%, rgba(147, 146, 241, 0.00) 100%);
+  }
+  
+  /* Card 4 */
+  .card-4 {
+    border-radius: 40px;
+    background: linear-gradient(180deg, #FFC7E5 0%, rgba(255, 199, 229, 0.00) 100%);
+  }
+  
+  /* Define styles for the cards */
+  .card {
+    
+    width: 270px;
+    height: 263px;
+    flex-shrink: 0;
+    
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    /* box-shadow: -1rem 0 3rem #ffffff; */
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+    /* left: 0px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    margin-left:-100px;
+  }
+  
+  /* Card-specific styles */
+  .card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+  }
+  
+  .title {
+    color: inherit;
+    font-size: 15px;
+    font-family: Jacques Francois;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    margin-top: -35px;
+    
+  }
+  
+  /* .bar {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    height: 5px;
+    width: 100px;
+    
+  }
+  
+  .emptybar {
+    background-color: #ABDCE7;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .filledbar {
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: rgb(0,154,217);
+    background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgb(148, 209, 197) 65%, rgb(73, 223, 213) 100%);
+    transition: 0.6s ease-out;
+  }
+  
+  .card:hover .filledbar {
+    width: 120px;
+    transition: 0.4s ease-out;
+  } */
+  
+  .stroke {
+    stroke: white;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    transition: 0.6s ease-out;
+  }
+  
+  .card:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+  }
