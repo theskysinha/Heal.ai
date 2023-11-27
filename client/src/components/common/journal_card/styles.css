@@ -1,34 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300&family=Jacques+Francois&family=Mohave&display=swap');
 
-.gradient-background {
-    height: 707px;
-     background: linear-gradient(62deg, #b7dae4, #87aae1, #e8b7fb, #f5cbe9);
-       animation: gradient 60s ease infinite; 
-        background-size: 400% 400%;
-    
+.cols{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-
-.quote{
-    margin-left:0%;
-    font-family: Jacques Francois;
-    font-size: 40px;
-    color: rgb(50, 120, 186) ;
-    text-align: center;
-    font-family: Jacques Francois;
-    
-    font-style: normal;
   
-    line-height:1%;
-    letter-spacing: -2.8px;
-    margin-top: 0%;
-
-}
+  .col{
+    width: calc(25% - 2rem);
+    margin: 1rem;
+    cursor: pointer;
+  }
   
-  .card_container{
-    margin-left: 33%;
-    width:35%;
-    height: 30%;
-    margin-top: 5%;
+  .container{
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
       -webkit-perspective: 1000px;
@@ -54,33 +42,32 @@
       border-radius: 10px;
       color: #fff;
       font-size: 1.5rem;
-      
   }
   
   .back{
-    background: #9cc6e7;
-    background: -webkit-linear-gradient(45deg,  #cedce7 0%,#2477ab 100%);
-    background: -o-linear-gradient(45deg,  #cedce7 0%,  #57bed7 100%);
-    background: linear-gradient(45deg,  #cedce7 0%,#2288b8 100%);
+    background: #cedce7;
+    background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+    background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+    background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
   }
   
   .front:after{
-      /*position: absolute;*/
+      position: absolute;
       top: 0;
       left: 0;
       z-index: 1;
       width: 100%;
       height: 100%;
-      
+      content: '';
       display: block;
       opacity: .6;
-      background-color: rgb(108, 148, 197);
+      background-color: #000;
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden;
       border-radius: 10px;
   }
-  .card_container:hover .front,
-  .card_container:hover .back{
+  .container:hover .front,
+  .container:hover .back{
       -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
       transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
       -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -111,28 +98,28 @@
       z-index: 2;
   }
   
-  .card_container .back{
+  .container .back{
       -webkit-transform: rotateY(180deg);
               transform: rotateY(180deg);
       -webkit-transform-style: preserve-3d;
               transform-style: preserve-3d;
   }
   
-  .card_container .front{
+  .container .front{
       -webkit-transform: rotateY(0deg);
               transform: rotateY(0deg);
       -webkit-transform-style: preserve-3d;
               transform-style: preserve-3d;
   }
   
-  .card_container:hover .back{
+  .container:hover .back{
     -webkit-transform: rotateY(0deg);
             transform: rotateY(0deg);
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
   }
   
-  .card_container:hover .front{
+  .container:hover .front{
     -webkit-transform: rotateY(-180deg);
             transform: rotateY(-180deg);
     -webkit-transform-style: preserve-3d;
@@ -162,69 +149,4 @@
     color: rgba(255,255,255,0.7);
     font-family: 'Montserrat';
     font-weight: 300;
-  }
-  .input-card_container {
-    text-align: center;
-  }
-
-  .input-container input {
-    margin: 50px;
-    padding: 5px;
-    font-size: 1em;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: white; /* Make text transparent */
-  }
-  .scrolling-card_container {
-    max-height: max-content; /* Adjust the max height as needed */
-    overflow-x: auto ;
-    overflow-y:auto ;
-    white-space: nowrap; /* Enable vertical scrolling */
-  }
-
-
-  .btn-new{
-    background-color:rgb(203, 237, 249);
-    margin-top: 8% ;
-    margin-left: 0%;
-    width:110px;
-    height:30px;
-    border:none;
-    font-size: 14px;
-    color:#666;
-    box-shadow:
-    -7px -7px 20px 0px #fff9,
-    -4px -4px 5px 0px #fff9,
-    7px 7px 20px 0px #0002,
-    4px 4px 5px 0px #0001;transition: all 0.3s ease;
-    z-index: -1;
-    border-radius: 40px;
-     
-  }
-  .btn-new:hover {
-    background-color: rgb(131, 197, 221); /* Change the background color on hover */
-  }
-  .btn-save2{
-    background-color:rgb(203, 237, 249);
-    margin-top: 0% ;
-    margin-left:42%;
-    margin-right: 3%;
-    
-    width:110px;
-    height:30px;
-    border:none;
-    color:#666;
-    font-size: 14px;
-    box-shadow:
-    -7px -7px 20px 0px #fff9,
-    -4px -4px 5px 0px #fff9,
-    7px 7px 20px 0px #0002,
-    4px 4px 5px 0px #0001;transition: all 0.3s ease;
-    z-index: -1;
-    border-radius: 40px;
-     
-  }
-  .btn-save2:hover {
-    background-color: rgb(131, 197, 221); /* Change the background color on hover */
   }
